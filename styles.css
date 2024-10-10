@@ -1,0 +1,144 @@
+/*
+ * #iocontainer: div containing input field & program result
+ *     #text-input: input for program input
+ *     #result: div containing program result
+ *
+ * #content-container: div containing description of program & program input submissino button
+ *     #info-container: div containing text of program description
+ *         #program-description: p containing description of program
+ *     #check-btn: button provides entrypoint for program
+ *
+ * #palette-container: div containing colors used in design showcased
+*      ...palette-item: div(s) which backgrounds color are each color used in the project
+*/
+
+/* margin/padding order: t r b l */
+
+/* start setup code */
+:root {
+    --col-0: #233142; /* background color */
+    --col-1: #455d7a;
+    --col-2: #f95959;
+    --col-3: #e3e3e3;
+    --t-col: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--col-0);
+
+    /* align the two containers... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+/* end setup code */
+
+/* start color palette setup */
+#palette-container {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+}
+
+.palette-item {
+    width: 50px;
+    height: 50px;
+}
+
+#pi-0 {
+    background-color: var(--col-0);
+}
+
+#pi-1 {
+    background-color: var(--col-1);
+}
+
+#pi-2 {
+    background-color: var(--col-2);
+}
+
+#pi-3 {
+    background-color: var(--col-3);
+}
+/* end color palette setup */
+
+/* begin main styling */
+#project-title {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+#containers-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* stretch */
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: 40vh;
+    max-width: 400px;
+    max-height: 700px;
+    /* border: 5px solid red; */
+}
+
+.shared-container-style {
+    background: var(--col-1);
+    width: fit-content;
+    height: fit-content;
+    height: 100%;
+    width: 50%;
+    margin: 10px;
+    flex: 1;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#text-input {
+    width: 100%;
+    /* background-color: var(--col-1); */
+}
+
+#check-btn {
+    width: 100%;
+    height: 40px;
+    background-color: var(--col-2);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#result {
+    width: 100%;
+    height: 70%;
+    background-color: #ffffff;
+    border-radius: 2.5px;
+    border: 0.5px solid grey;
+    overflow: scroll;
+    /* background-color: var(--col-1); */
+}
+
+.spec-styling {
+    margin: 0 0 5px 0 !important;
+}
+/* end main styling */
