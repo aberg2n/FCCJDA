@@ -1,11 +1,20 @@
-const mButton = document.getElementById("check-btn");
-const mInput = document.getElementById("text-input");
-const mResult = document.getElementById("result");
+const mButton = document.getElementById("check-btn"); // program submission button
+const mInput = document.getElementById("text-input"); // program input element
+const mResult = document.getElementById("result");    // program result element
+
+function checkForPalindrome(string) {
+    // ...
+}
 
 mButton.addEventListener("click", () => {
-    // get string value from input, if no input return false, else return input 'toLowerCase'
+    // 1. get string value from input assign to varible 'data'
+    // 2. if no input value set data to false, else set data to input value->toLowerCase
     let data = mInput.value != "" ? mInput.value.toLowerCase() : false;
-    if (!data) alert("Please input a value");
 
-    // ...
+    // if no data alert user, else check for palindrome
+    if (!data) {
+        alert("Please input a value");
+    } else {
+        checkForPalindrome(data);
+    }
 }); 
