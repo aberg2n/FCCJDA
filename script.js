@@ -3,7 +3,16 @@ const mInput = document.getElementById("text-input"); // program input element
 const mResult = document.getElementById("result");    // program result element
 
 function checkForPalindrome(string) {
-    // ...
+    // 1. reverse input string
+    // 2. compare input string to reversed string
+    // 3. if equal alert user that input is a palindrome,
+    //      else alert user that input is not a palindrome
+    let reversedString = string.split("").reverse().join("");
+    if (string === reversedString) {
+        mResult.innerHTML = "This is a palindrome";
+    } else {
+        mResult.innerHTML = "This is not a palindrome";
+    }
 }
 
 mButton.addEventListener("click", () => {
